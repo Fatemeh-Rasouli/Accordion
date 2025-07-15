@@ -1,23 +1,19 @@
-import SingleQuestion from './Question'
 import './index.css'
 import'./App.css'
-import data from './data'
-import { useState } from 'react'
+import Review from './Review';
+
 
 function App() {
-  const [questions ,setQuestions]= useState( data)
     return (
-  <div className='container'>
-    <h3> سوالی براتون پیش آمده؟</h3>
-    <div className='info'>
-      {
-        questions.map((question, index)=>{
-          return <SingleQuestion key={index} {...question}/>
-        })
-      }
-    </div>
-  </div>
+      <main>
+        <div className='container'>
+          <div className='title'>
+            <h2>نظرات همکاران</h2>
+          </div>
+          <Review/>
+        </div>
+      </main>
     )
 }
 
-export default App;
+export default App; 
